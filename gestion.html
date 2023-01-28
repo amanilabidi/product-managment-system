@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gestion.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="gestion">
+       <header class="head">
+            <h1>TECHNO MA STORE</h1>
+            <p>PRODUCT MANAGMENT SYSTEM</p>
+       </header>
+       <section class="inputs">
+        <input type="text" id="title" placeholder="title">
+        <div class="price">
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+            <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+            <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="count">
+        <input type="string" id="category" placeholder="category">
+        <button id="submit">Create</button>
+       </section>
+       <section class="outputs">
+            <div class="outputsearch">
+                 <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
+                 <div class="btnsearch">
+                      <button onclick="search(this.id)" id="searchTitle">Search By Title</button>
+                      <button onclick="search(this.id)" id="searchCategory">Search By Category</button>
+                 </div>
+            </div>
+            
+       </section>
+       <div id="deleteall">
+        
+       </div>
+       <table>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>PRICE</th>
+                <th>TAXES</th>
+                <th>ADS</th>
+                <th>DISCOUNT</th>
+                <th>TOTAL</th>
+                <th>CATEGORY</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>
+            <tbody id="tbody">
+            </tbody>
+       </table>
+
+    </div>
+    <script src="gestion.js"></script>
+</body>
+</html>
